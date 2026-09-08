@@ -64,8 +64,9 @@ export const mapsUrl = () =>
 const unsplash = (id, w = 1200) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
 
-const pexels = (id, w = 1200) =>
-  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
+const pexels = (id, w = 1200, h) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}` +
+  (h ? `&h=${h}&fit=crop` : '')
 
 export const images = {
   // Foto da Dra. Jordana na primeira dobra (1130x1520, já sem os
@@ -74,8 +75,8 @@ export const images = {
   heroLowRes: '/imagens/dra-jordana-2-640.webp',
 
   // PLACEHOLDER — imagens ilustrativas dos procedimentos
-  procedureHarmonizacao: unsplash('1531746020798-e6953c6e8e04', 800),
-  procedureLabial: unsplash('1616683693504-3ea7e9ad6fec', 800),
+  procedureHarmonizacao: pexels(34775442, 800, 1067),
+  procedureLabial: pexels(27666913, 800, 1067),
   procedureBotox: unsplash('1746708810803-722593e53772', 800),
   procedureOlheiras: pexels(37663096, 800),
 
@@ -104,7 +105,7 @@ export const procedures = [
     description:
       'Realce das proporções e equilíbrio facial de forma personalizada, respeitando os traços que já são seus.',
     image: images.procedureHarmonizacao,
-    alt: 'Imagem ilustrativa de rosto feminino em tons nude',
+    alt: 'Imagem ilustrativa de aplicação de preenchimento na região das maçãs do rosto',
   },
   {
     index: '02',
@@ -112,7 +113,7 @@ export const procedures = [
     description:
       'Definição e volume com resultado delicado e natural, no desenho que combina com o seu rosto.',
     image: images.procedureLabial,
-    alt: 'Imagem ilustrativa de close no terço inferior do rosto',
+    alt: 'Imagem ilustrativa de aplicação de preenchimento nos lábios',
   },
   {
     index: '03',
