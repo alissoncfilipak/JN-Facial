@@ -35,7 +35,7 @@ export default function Results() {
           </Reveal>
         </div>
 
-        <div className="mt-9 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mt-11 lg:grid-cols-4">
+        <div className="mt-9 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-5 lg:mt-11 lg:-mx-12 lg:grid-cols-4 lg:gap-5 2xl:-mx-16">
           {results.map((item, i) => (
             <Reveal key={item.id} delay={i * 90}>
               <button
@@ -74,7 +74,7 @@ export default function Results() {
                   </span>
                 </div>
 
-                <p className="mt-5 text-[0.7rem] tracking-[0.18em] text-ink/78 uppercase">
+                <p className="mt-5 text-[0.72rem] tracking-[0.18em] text-ink/78 uppercase">
                   {item.caption}
                 </p>
               </button>
