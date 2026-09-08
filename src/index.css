@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   Design tokens — Off-white & Bronze
+   Ajuste aqui para mudar toda a identidade visual do site.
+------------------------------------------------------------------ */
+@theme {
+  /* Fundos */
+  --color-canvas: #faf6f0; /* off-white quente — fundo principal */
+  --color-canvas-deep: #f2eade; /* bege claro — seções alternadas */
+  --color-surface: #ebe0d2; /* nude — fundo de imagem/placeholder */
+  --color-surface-2: #e2d4c2;
+
+  /* Texto e acentos */
+  --color-ink: #241e1a; /* grafite — texto principal */
+  --color-bronze: #6e5230; /* acento; contraste AA em texto pequeno */
+  --color-bronze-soft: #9b7a50; /* acento para títulos grandes em itálico */
+  --color-mute: #6b6055; /* texto de apoio */
+
+  --color-whatsapp: #25d366;
+
+  --font-display: "Bodoni Moda", "Times New Roman", serif;
+  --font-sans: "Jost", "Helvetica Neue", Arial, sans-serif;
+
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Espaço para a barra fixa de WhatsApp no mobile */
+  @media (max-width: 767px) {
+    body {
+      padding-bottom: calc(4.25rem + env(safe-area-inset-bottom));
+    }
+  }
+
+  ::selection {
+    background: var(--color-bronze);
+    color: var(--color-canvas);
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--color-bronze);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+
+  /* Header fixo (74px quando rolado) cobriria o topo da seção ao navegar
+     pelas âncoras do menu. Reserva o espaço dele + uma folga de respiro. */
+  :target,
+  section[id],
+  footer[id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+@layer components {
+  /* Ritmo vertical das seções — único ponto de ajuste do site.
+     ATENÇÃO: na fronteira entre duas seções estes valores se SOMAM.
+     O vão que se vê entre uma seção e a seguinte é o dobro do valor abaixo. */
+  .section-y {
+    padding-block: 1.5rem;
+  }
+  .section-y-wide {
+    padding-block: 2rem;
+  }
+  @media (min-width: 768px) {
+    .section-y {
+      padding-block: 2rem;
+    }
+    .section-y-wide {
+      padding-block: 2.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-y {
+      padding-block: 2.25rem;
+    }
+    .section-y-wide {
+      padding-block: 3rem;
+    }
+  }
+
+  /* Rótulo de seção: 01 — SOBRE */
+  .eyebrow {
+    font-size: 0.6875rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--color-bronze);
+    font-weight: 400;
+  }
+
+  /* A barra fixa de WhatsApp cede lugar ao menu mobile aberto */
+  body[data-menu-open='true'] .mobile-cta-bar {
+    display: none;
+  }
+
+  .hairline {
+    border-color: color-mix(in srgb, var(--color-bronze) 30%, transparent);
+  }
+
+  /* Unifica fotos de origens diferentes em uma só direção de arte */
+  .duotone {
+    filter: sepia(0.16) saturate(0.92) contrast(1.02) brightness(1.03);
+  }
+
+  /* Botão principal — bronze sólido com brilho que atravessa no hover */
+  .btn-primary {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--color-bronze);
+    color: var(--color-canvas);
+    transition:
+      transform 0.4s var(--ease-soft),
+      background-color 0.4s var(--ease-soft);
+  }
+  .btn-primary::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 -60%;
+    width: 40%;
+    z-index: -1;
+    background: linear-gradient(
+      100deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transform: skewX(-18deg);
+    transition: left 0.7s var(--ease-soft);
+  }
+  .btn-primary:hover::after {
+    left: 120%;
+  }
+  .btn-primary:hover {
+    background: #57401f;
+  }
+  .btn-primary:active {
+    transform: scale(0.985);
+  }
+
+  /* Botão secundário — contorno fino que se preenche */
+  .btn-ghost {
+    position: relative;
+    border: 1px solid color-mix(in srgb, var(--color-bronze) 45%, transparent);
+    color: var(--color-ink);
+    transition:
+      border-color 0.4s var(--ease-soft),
+      color 0.4s var(--ease-soft),
+      background-color 0.4s var(--ease-soft);
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-bronze);
+    background: color-mix(in srgb, var(--color-bronze) 8%, transparent);
+  }
+
+  /* Sublinhado que cresce da esquerda */
+  .link-underline {
+    background-image: linear-gradient(var(--color-bronze), var(--color-bronze));
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.45s var(--ease-soft);
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+}
+
+@layer utilities {
+  /* Textura de papel sobre todo o site */
+  .grain::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: 0.28;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E");
+  }
+
+  .glow-warm {
+    background: radial-gradient(
+      60% 55% at 50% 40%,
+      color-mix(in srgb, var(--color-surface) 60%, transparent),
+      transparent 70%
+    );
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+      opacity 1s var(--ease-soft),
+      transform 1s var(--ease-soft);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
