@@ -73,7 +73,7 @@ export const images = {
   // PLACEHOLDER — imagens ilustrativas dos procedimentos
   procedureHarmonizacao: unsplash('1531746020798-e6953c6e8e04', 800),
   procedureLabial: unsplash('1616683693504-3ea7e9ad6fec', 800),
-  procedureBotox: unsplash('1570172619644-dfd03ed5d881', 800),
+  procedureBotox: unsplash('1746708810803-722593e53772', 800),
   procedureOlheiras: unsplash('1512290923902-8a9f81dc236c', 800),
 
   /* Retrato editorial da Dra. Jordana na seção "Sobre" (1200x1600). */
@@ -117,7 +117,7 @@ export const procedures = [
     description:
       'Suavização das linhas de expressão e uma aparência mais descansada, preservando a naturalidade.',
     image: images.procedureBotox,
-    alt: 'Imagem ilustrativa de aplicação de procedimento estético facial',
+    alt: 'Imagem ilustrativa de aplicação de toxina botulínica na região da glabela',
   },
   {
     index: '04',
