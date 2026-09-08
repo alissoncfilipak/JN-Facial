@@ -64,6 +64,9 @@ export const mapsUrl = () =>
 const unsplash = (id, w = 1200) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
 
+const pexels = (id, w = 1200) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
+
 export const images = {
   // Foto da Dra. Jordana na primeira dobra (1130x1520, já sem os
   // artefatos de interface do print de Instagram original)
@@ -74,7 +77,7 @@ export const images = {
   procedureHarmonizacao: unsplash('1531746020798-e6953c6e8e04', 800),
   procedureLabial: unsplash('1616683693504-3ea7e9ad6fec', 800),
   procedureBotox: unsplash('1746708810803-722593e53772', 800),
-  procedureOlheiras: unsplash('1512290923902-8a9f81dc236c', 800),
+  procedureOlheiras: pexels(37663096, 800),
 
   /* Retrato editorial da Dra. Jordana na seção "Sobre" (1200x1600). */
   doctor: '/imagens/dra-jordana.webp',
@@ -125,7 +128,7 @@ export const procedures = [
     description:
       'Tratamento personalizado para melhorar a aparência da região abaixo dos olhos e o aspecto de cansaço.',
     image: images.procedureOlheiras,
-    alt: 'Imagem ilustrativa de cuidado com a região dos olhos',
+    alt: 'Imagem ilustrativa de aplicação de preenchimento na região abaixo dos olhos',
   },
 ]
 

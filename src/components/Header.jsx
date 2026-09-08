@@ -74,8 +74,8 @@ export default function Header() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-[cubic-bezier(.22,.61,.36,1)] ${
           scrolled
-            ? 'border-b border-bronze/28 bg-canvas/85 backdrop-blur-md py-4'
-            : 'border-b border-transparent py-6 md:py-8'
+            ? 'border-b border-bronze/28 bg-canvas/85 backdrop-blur-md py-5'
+            : 'border-b border-transparent py-8 md:py-10'
         }`}
       >
         <div className="mx-auto flex max-w-[1400px] 2xl:max-w-[1680px] items-center justify-between px-6 md:px-10 lg:px-16 2xl:px-20">
@@ -84,8 +84,8 @@ export default function Header() {
             className="group flex items-baseline gap-2.5"
             aria-label="Dra. Jordana Nogueira — início"
           >
-            <span className="text-[0.6rem] tracking-[0.3em] text-bronze">DRA.</span>
-            <span className="font-display text-lg tracking-wide text-ink md:text-xl">
+            <span className="text-[0.65rem] tracking-[0.3em] text-bronze">DRA.</span>
+            <span className="font-display text-xl tracking-wide text-ink md:text-2xl">
               Jordana Nogueira
             </span>
           </a>
@@ -96,7 +96,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="link-underline text-[0.8rem] tracking-[0.14em] text-ink/82 uppercase transition-colors duration-300 hover:text-ink"
+                className="link-underline text-[0.85rem] tracking-[0.14em] text-ink/82 uppercase transition-colors duration-300 hover:text-ink"
               >
                 {link.label}
               </a>
@@ -104,7 +104,7 @@ export default function Header() {
           </nav>
 
           <div className="flex shrink-0 items-center gap-4">
-            <WhatsAppLink className="btn-primary hidden shrink-0 px-6 py-3 text-[0.7rem] font-medium tracking-[0.18em] whitespace-nowrap uppercase lg:inline-block">
+            <WhatsAppLink className="btn-primary hidden shrink-0 px-7 py-3.5 text-[0.75rem] font-medium tracking-[0.18em] whitespace-nowrap uppercase lg:inline-block">
               Agendar avaliação
             </WhatsAppLink>
 
@@ -112,12 +112,12 @@ export default function Header() {
               ref={toggleRef}
               type="button"
               onClick={() => setOpen(true)}
-              className="flex h-10 w-10 items-center justify-center text-ink xl:hidden"
+              className="flex h-11 w-11 items-center justify-center text-ink xl:hidden"
               aria-label="Abrir menu"
               aria-expanded={open}
               aria-controls="menu-mobile"
             >
-              <Menu size={22} strokeWidth={1.25} />
+              <Menu size={24} strokeWidth={1.25} />
             </button>
           </div>
         </div>

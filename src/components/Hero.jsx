@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative flex min-h-[min(100svh,46rem)] items-center overflow-hidden pt-28 pb-10 md:pt-32 lg:pt-28 lg:pb-10 [@media(max-height:820px)]:lg:pt-24 [@media(max-height:820px)]:lg:pb-8"
+      className="relative flex min-h-[min(100svh,46rem)] items-center overflow-hidden pt-32 pb-10 md:pt-36 lg:pt-32 lg:pb-10 [@media(max-height:820px)]:lg:pt-28 [@media(max-height:820px)]:lg:pb-8"
     >
       <div className="glow-warm absolute inset-0 -z-10" aria-hidden="true" />
 
