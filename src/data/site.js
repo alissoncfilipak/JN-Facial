@@ -75,10 +75,10 @@ export const images = {
   heroLowRes: '/imagens/dra-jordana-2-640.webp',
 
   // PLACEHOLDER — imagens ilustrativas dos procedimentos
-  procedureHarmonizacao: pexels(34775442, 800, 1067),
-  procedureLabial: pexels(27666913, 800, 1067),
-  procedureBotox: unsplash('1746708810803-722593e53772', 800),
-  procedureOlheiras: pexels(37663096, 800),
+  procedureHarmonizacao: pexels(3762776, 800, 1067),
+  procedureLabial: pexels(8183931, 800, 1067),
+  procedureBotox: pexels(14001858, 800, 1067),
+  procedureOlheiras: pexels(34460007, 800, 1067),
 
   /* Retrato editorial da Dra. Jordana na seção "Sobre" (1200x1600). */
   doctor: '/imagens/dra-jordana.webp',
@@ -105,7 +105,7 @@ export const procedures = [
     description:
       'Realce das proporções e equilíbrio facial de forma personalizada, respeitando os traços que já são seus.',
     image: images.procedureHarmonizacao,
-    alt: 'Imagem ilustrativa de aplicação de preenchimento na região das maçãs do rosto',
+    alt: 'Imagem ilustrativa de retrato feminino com traços faciais equilibrados',
   },
   {
     index: '02',
@@ -113,7 +113,7 @@ export const procedures = [
     description:
       'Definição e volume com resultado delicado e natural, no desenho que combina com o seu rosto.',
     image: images.procedureLabial,
-    alt: 'Imagem ilustrativa de aplicação de preenchimento nos lábios',
+    alt: 'Imagem ilustrativa de close nos lábios com contorno e volume naturais',
   },
   {
     index: '03',
@@ -121,7 +121,7 @@ export const procedures = [
     description:
       'Suavização das linhas de expressão e uma aparência mais descansada, preservando a naturalidade.',
     image: images.procedureBotox,
-    alt: 'Imagem ilustrativa de aplicação de toxina botulínica na região da glabela',
+    alt: 'Imagem ilustrativa de rosto feminino com pele lisa e expressão descansada',
   },
   {
     index: '04',
@@ -129,7 +129,7 @@ export const procedures = [
     description:
       'Tratamento personalizado para melhorar a aparência da região abaixo dos olhos e o aspecto de cansaço.',
     image: images.procedureOlheiras,
-    alt: 'Imagem ilustrativa de aplicação de preenchimento na região abaixo dos olhos',
+    alt: 'Imagem ilustrativa de close na região dos olhos com aparência descansada',
   },
 ]
 
