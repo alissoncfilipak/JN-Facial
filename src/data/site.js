@@ -75,7 +75,7 @@ export const images = {
   heroLowRes: '/imagens/dra-jordana-2-640.webp',
 
   // PLACEHOLDER — imagens ilustrativas dos procedimentos
-  procedureHarmonizacao: pexels(3762776, 800, 1067),
+  procedureHarmonizacao: pexels(16140635, 800, 1067),
   procedureLabial: pexels(8183931, 800, 1067),
   procedureBotox: pexels(14001858, 800, 1067),
   procedureOlheiras: pexels(34460007, 800, 1067),
@@ -105,7 +105,7 @@ export const procedures = [
     description:
       'Realce das proporções e equilíbrio facial de forma personalizada, respeitando os traços que já são seus.',
     image: images.procedureHarmonizacao,
-    alt: 'Imagem ilustrativa de retrato feminino com traços faciais equilibrados',
+    alt: 'Imagem ilustrativa de retrato feminino com traços faciais harmônicos e naturais',
   },
   {
     index: '02',

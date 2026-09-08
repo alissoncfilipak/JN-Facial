@@ -5,7 +5,7 @@
  * aquela foto ainda será fornecida — nunca uma foto de banco no lugar
  * de uma pessoa ou de um resultado real.
  */
-export default function PhotoSlot({ src, alt, label, monogram = 'JN', className = '' }) {
+export default function PhotoSlot({ src, alt, label, width, height, monogram = 'JN', className = '' }) {
   if (src) {
     return (
       <img
@@ -13,6 +13,8 @@ export default function PhotoSlot({ src, alt, label, monogram = 'JN', className 
         alt={alt}
         loading="lazy"
         decoding="async"
+        width={width}
+        height={height}
         className={`duotone h-full w-full object-cover ${className}`}
       />
     )

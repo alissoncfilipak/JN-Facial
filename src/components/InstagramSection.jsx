@@ -9,7 +9,7 @@ export default function InstagramSection() {
       <div className="mx-auto grid max-w-[1400px] 2xl:max-w-[1680px] grid-cols-1 items-center gap-8 px-6 md:px-10 lg:grid-cols-12 lg:px-16 2xl:px-20">
         <div className="lg:col-span-7">
           <Reveal>
-            <SectionLabel index="07">Instagram</SectionLabel>
+            <SectionLabel index="6">Instagram</SectionLabel>
           </Reveal>
           <Reveal delay={100}>
             <h2 className="mt-7 font-display text-4xl leading-[1.05] text-ink md:text-5xl lg:text-[3.4rem]">

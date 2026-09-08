@@ -7,7 +7,7 @@ export default function Philosophy() {
     <section className="section-y-wide relative overflow-hidden border-t border-bronze/38">
       <div className="mx-auto max-w-[1400px] 2xl:max-w-[1680px] px-6 md:px-10 lg:px-16 2xl:px-20">
         <Reveal>
-          <SectionLabel index="03">Filosofia de tratamento</SectionLabel>
+          <SectionLabel index="2">Filosofia de tratamento</SectionLabel>
         </Reveal>
 
         <div className="mt-9 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">

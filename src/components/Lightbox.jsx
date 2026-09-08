@@ -74,12 +74,14 @@ export default function Lightbox({ item, onClose, onPrev, onNext }) {
             { key: 'before', tag: 'Antes', src: item.before },
             { key: 'after', tag: 'Depois', src: item.after },
           ].map((side) => (
-            <div key={side.key} className="relative aspect-[3/4] overflow-hidden bg-surface">
+            <div key={side.key} className="relative aspect-[15/23] overflow-hidden bg-surface">
               <PhotoSlot
                 src={side.src}
                 alt={`${side.tag} — ${item.caption}`}
                 label="Imagem demonstrativa"
                 monogram=""
+                width="450"
+                height="690"
               />
               <span className="absolute left-4 top-4 bg-canvas-deep/80 px-3 py-1.5 text-[0.58rem] tracking-[0.24em] text-bronze uppercase">
                 {side.tag}

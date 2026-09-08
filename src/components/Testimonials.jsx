@@ -11,7 +11,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-[1400px] 2xl:max-w-[1680px] px-6 md:px-10 lg:px-16 2xl:px-20">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">
-            <SectionLabel index="05">Depoimentos</SectionLabel>
+            <SectionLabel index="4">Depoimentos</SectionLabel>
             <h2 className="mt-7 max-w-xl font-display text-4xl leading-[1.05] text-ink md:text-5xl lg:text-[3.4rem]">
               O Full Face
               <span className="block italic text-bronze-soft">na voz de quem fez</span>

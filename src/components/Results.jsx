@@ -21,7 +21,7 @@ export default function Results() {
       <div className="mx-auto max-w-[1400px] 2xl:max-w-[1680px] px-6 md:px-10 lg:px-16 2xl:px-20">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:items-end">
           <Reveal className="lg:col-span-7">
-            <SectionLabel index="04">Resultados</SectionLabel>
+            <SectionLabel index="3">Resultados</SectionLabel>
             <h2 className="mt-7 max-w-xl font-display text-4xl leading-[1.05] text-ink md:text-5xl lg:text-[3.4rem]">
               Antes e depois,
               <span className="block italic text-bronze-soft">sem exageros</span>
@@ -51,13 +51,15 @@ export default function Results() {
                   ].map((side) => (
                     <div
                       key={side.key}
-                      className="relative aspect-[15/23] overflow-hidden bg-surface"
+                      className="relative aspect-[1/2] overflow-hidden bg-surface"
                     >
                       <PhotoSlot
                         src={side.src}
                         alt={`${side.tag} — ${item.caption}`}
                         label="Imagem demonstrativa"
                         monogram=""
+                        width="450"
+                        height="690"
                         className="transition-transform duration-[1.1s] ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.05]"
                       />
                       <span className="absolute left-3 top-3 text-[0.55rem] tracking-[0.22em] text-bronze uppercase">

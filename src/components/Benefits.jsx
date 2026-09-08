@@ -18,7 +18,7 @@ export default function Benefits() {
       <div className="mx-auto grid max-w-[1400px] 2xl:max-w-[1680px] grid-cols-1 gap-14 px-6 md:px-10 lg:grid-cols-12 lg:gap-12 lg:px-16 2xl:px-20">
         <div className="lg:col-span-4">
           <Reveal>
-            <SectionLabel index="06">Diferenciais</SectionLabel>
+            <SectionLabel index="5">Diferenciais</SectionLabel>
             <h2 className="mt-7 font-display text-[2.3rem] leading-[1.05] text-ink md:text-[2.9rem]">
               Por que escolher a
               <span className="block italic text-bronze-soft">Dra. Jordana?</span>

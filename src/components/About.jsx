@@ -20,6 +20,8 @@ export default function About() {
                 src={images.doctor}
                 alt="Dra. Jordana Nogueira"
                 label="Espaço reservado para a foto oficial da Dra. Jordana"
+                width="1200"
+                height="1600"
               />
             </div>
           </div>
@@ -28,7 +30,7 @@ export default function About() {
         {/* Texto */}
         <div className="lg:col-span-6 lg:col-start-7 lg:pt-2">
           <Reveal>
-            <SectionLabel index="01">Sobre</SectionLabel>
+            <SectionLabel>Sobre</SectionLabel>
           </Reveal>
 
           <Reveal delay={100}>
