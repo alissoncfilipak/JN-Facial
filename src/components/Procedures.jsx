@@ -45,6 +45,7 @@ export default function Procedures() {
                     alt={procedure.alt}
                     loading="lazy"
                     decoding="async"
+                    fetchPriority="low"
                     width="800"
                     height="1067"
                     className="duotone h-full w-full object-cover transition-transform duration-[1.1s] ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.06]"

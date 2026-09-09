@@ -24,6 +24,7 @@ export default function About() {
                 label="Espaço reservado para a foto oficial da Dra. Jordana"
                 width="1200"
                 height="1600"
+                fetchPriority="low"
               />
             </div>
           </div>

@@ -62,6 +62,7 @@ export default function Results() {
                         monogram=""
                         width="450"
                         height="690"
+                        fetchPriority="low"
                         className="transition-transform duration-[1.1s] ease-[cubic-bezier(.22,.61,.36,1)] group-hover:scale-[1.05]"
                       />
                       <span className="absolute left-3 top-3 text-[0.55rem] tracking-[0.22em] text-bronze uppercase">

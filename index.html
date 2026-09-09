@@ -39,8 +39,29 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--
+      As fontes agora sao servidas de /public/fonts (ver @font-face em
+      src/index.css). Os dois preloads abaixo sao as faces do H1 da
+      primeira dobra — sem eles o navegador so as descobre depois de
+      baixar E parsear o CSS, um round-trip inteiro mais tarde.
+      O Jost sai do proprio CSS: com font-display:swap o texto pinta na
+      fonte de fallback na hora, e preloada-lo aqui so disputaria banda
+      com o retrato do LCP.
+    -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/bodoni-moda-latin.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/bodoni-moda-italic-latin.woff2"
+      crossorigin
+    />
     <!--
       O site monta pelo JavaScript, então o retrato da primeira dobra só
       seria descoberto depois do bundle carregar. O preload abaixo faz o
@@ -54,10 +75,6 @@
       imagesrcset="/imagens/dra-jordana-2-640.webp 640w, /imagens/dra-jordana-2-800.webp 800w, /imagens/dra-jordana-2.webp 1130w"
       imagesizes="(max-width: 1024px) 92vw, 40vw"
       fetchpriority="high"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,48,400;1,48,400&family=Jost:wght@300;400;500&display=swap"
-      rel="stylesheet"
     />
 
     <script type="application/ld+json">

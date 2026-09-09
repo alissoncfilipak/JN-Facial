@@ -1,0 +1,3 @@
+# Build intermediário da pré-renderização (scripts/prerender.mjs).
+# Descartável: é regerado por `npm run build` e nada em dist/ depende dele.
+.ssr/

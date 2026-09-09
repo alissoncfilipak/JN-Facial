@@ -13,6 +13,14 @@ export default function PhotoSlot({
   label,
   width,
   height,
+  /**
+   * Prioridade de rede da imagem. As fotos abaixo da dobra passam 'low'
+   * para nao disputarem banda com o retrato do LCP: o `loading="lazy"`
+   * sozinho nao segura, porque o Chromium usa uma margem generosa de
+   * pre-carregamento e as busca ainda na primeira leva. O Lightbox passa
+   * 'high', ja que ali o usuario esta esperando a imagem na hora.
+   */
+  fetchPriority,
   monogram = 'JN',
   className = '',
 }) {
@@ -25,6 +33,7 @@ export default function PhotoSlot({
         alt={alt}
         loading="lazy"
         decoding="async"
+        fetchPriority={fetchPriority}
         width={width}
         height={height}
         className={`duotone h-full w-full object-cover ${className}`}

@@ -82,6 +82,7 @@ export default function Lightbox({ item, onClose, onPrev, onNext }) {
                 monogram=""
                 width="450"
                 height="690"
+                fetchPriority="high"
               />
               <span className="absolute left-4 top-4 bg-canvas-deep/80 px-3 py-1.5 text-[0.58rem] tracking-[0.24em] text-bronze uppercase">
                 {side.tag}
