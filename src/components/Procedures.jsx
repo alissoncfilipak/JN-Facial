@@ -39,7 +39,9 @@ export default function Procedures() {
                 <div className="relative aspect-[3/4] overflow-hidden bg-surface">
                   {/* PLACEHOLDER — imagens definidas em src/data/site.js */}
                   <img
-                    src={procedure.image}
+                    src={procedure.image.src}
+                    srcSet={procedure.image.srcSet}
+                    sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, calc(100vw - 3rem)"
                     alt={procedure.alt}
                     loading="lazy"
                     decoding="async"

@@ -18,6 +18,8 @@ export default function About() {
             <div className="relative aspect-[4/5] overflow-hidden">
               <PhotoSlot
                 src={images.doctor}
+                srcSet={images.doctorSrcSet}
+                sizes="(min-width: 1024px) 40vw, calc(100vw - 3rem)"
                 alt="Dra. Jordana Nogueira"
                 label="Espaço reservado para a foto oficial da Dra. Jordana"
                 width="1200"

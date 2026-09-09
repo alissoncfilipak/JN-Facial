@@ -59,7 +59,7 @@ export default function Hero() {
             <div className="relative h-[54svh] w-full overflow-hidden bg-surface lg:h-[clamp(26rem,66svh,42rem)]">
               <img
                 src={images.hero}
-                srcSet={`${images.heroLowRes} 640w, ${images.hero} 1130w`}
+                srcSet={images.heroSrcSet}
                 sizes="(max-width: 1024px) 92vw, 40vw"
                 alt="Dra. Jordana Nogueira"
                 width="1130"

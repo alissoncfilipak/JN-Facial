@@ -41,9 +41,22 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://images.pexels.com" crossorigin />
+    <!--
+      O site monta pelo JavaScript, então o retrato da primeira dobra só
+      seria descoberto depois do bundle carregar. O preload abaixo faz o
+      navegador buscá-lo em paralelo — é a maior fatia do LCP no celular.
+      Se o srcSet do Hero.jsx mudar, atualize também esta linha.
+    -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&display=swap"
+      rel="preload"
+      as="image"
+      href="/imagens/dra-jordana-2-800.webp"
+      imagesrcset="/imagens/dra-jordana-2-640.webp 640w, /imagens/dra-jordana-2-800.webp 800w, /imagens/dra-jordana-2.webp 1130w"
+      imagesizes="(max-width: 1024px) 92vw, 40vw"
+      fetchpriority="high"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,48,400;1,48,400&family=Jost:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
 
@@ -94,8 +107,8 @@
         "sameAs": ["https://www.instagram.com/dra.jordananogueira/"]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-DqyKgNTt.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DXU2WBBO.css">
+    <script type="module" crossorigin src="/assets/index-DuS6b7RN.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-WF3xaF0W.css">
   </head>
   <body>
     <div id="root"></div>

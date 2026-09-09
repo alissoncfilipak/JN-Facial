@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import { Maximize2 } from 'lucide-react'
 import { results, RESULTS_DISCLAIMER } from '../data/site'
 import Reveal from './Reveal'
 import SectionLabel from './SectionLabel'
 import PhotoSlot from './PhotoSlot'
-import Lightbox from './Lightbox'
+/* Carregado só quando a paciente amplia um resultado — fica fora do
+   pacote inicial, que é o que pesa na primeira abertura no celular. */
+const Lightbox = lazy(() => import('./Lightbox'))
 
 export default function Results() {
   const [openIndex, setOpenIndex] = useState(null)
@@ -85,12 +87,16 @@ export default function Results() {
         </div>
       </div>
 
-      <Lightbox
-        item={openIndex === null ? null : results[openIndex]}
-        onClose={close}
-        onPrev={prev}
-        onNext={next}
-      />
+      {openIndex !== null && (
+        <Suspense fallback={null}>
+          <Lightbox
+            item={results[openIndex]}
+            onClose={close}
+            onPrev={prev}
+            onNext={next}
+          />
+        </Suspense>
+      )}
     </section>
   )
 }

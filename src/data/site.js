@@ -61,27 +61,33 @@ export const mapsUrl = () =>
    Para substituir: coloque os arquivos em /public/imagens/ e troque
    a URL por, por exemplo, '/imagens/hero.webp'.
 ------------------------------------------------------------------ */
-const unsplash = (id, w = 1200) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`
-
-const pexels = (id, w = 1200, h) =>
-  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}` +
-  (h ? `&h=${h}&fit=crop` : '')
+/**
+ * Imagem de procedimento servida do próprio domínio, em WebP e em dois
+ * tamanhos. O navegador escolhe o menor que serve para a largura real do
+ * card — no celular isso vale mais de 60% de bytes por foto.
+ */
+const procedureImage = (slug) => ({
+  src: `/imagens/procedimento-${slug}-800.webp`,
+  srcSet: `/imagens/procedimento-${slug}-480.webp 480w, /imagens/procedimento-${slug}-800.webp 800w`,
+})
 
 export const images = {
   // Foto da Dra. Jordana na primeira dobra (1130x1520, já sem os
   // artefatos de interface do print de Instagram original)
   hero: '/imagens/dra-jordana-2.webp',
-  heroLowRes: '/imagens/dra-jordana-2-640.webp',
+  heroSrcSet:
+    '/imagens/dra-jordana-2-640.webp 640w, /imagens/dra-jordana-2-800.webp 800w, /imagens/dra-jordana-2.webp 1130w',
 
   // PLACEHOLDER — imagens ilustrativas dos procedimentos
-  procedureHarmonizacao: pexels(16140635, 800, 1067),
-  procedureLabial: pexels(8183931, 800, 1067),
-  procedureBotox: pexels(14001858, 800, 1067),
-  procedureOlheiras: pexels(34460007, 800, 1067),
+  procedureHarmonizacao: procedureImage('harmonizacao'),
+  procedureLabial: procedureImage('labial'),
+  procedureBotox: procedureImage('botox'),
+  procedureOlheiras: procedureImage('olheiras'),
 
   /* Retrato editorial da Dra. Jordana na seção "Sobre" (1200x1600). */
   doctor: '/imagens/dra-jordana.webp',
+  doctorSrcSet:
+    '/imagens/dra-jordana-800.webp 800w, /imagens/dra-jordana.webp 1200w',
 }
 
 /* ------------------------------------------------------------------
