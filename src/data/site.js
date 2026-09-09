@@ -119,7 +119,7 @@ export const procedures = [
     description:
       'Definição e volume com resultado delicado e natural, no desenho que combina com o seu rosto.',
     image: images.procedureLabial,
-    alt: 'Imagem ilustrativa de close nos lábios com contorno e volume naturais',
+    alt: 'Imagem ilustrativa da aplicação de preenchedor labial com seringa por profissional',
   },
   {
     index: '03',
