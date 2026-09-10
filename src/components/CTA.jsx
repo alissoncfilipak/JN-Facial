@@ -37,10 +37,10 @@ export default function CTA() {
         </Reveal>
 
         <Reveal delay={320}>
-          <p className="mt-8 text-[0.7rem] tracking-[0.2em] text-mute uppercase">
+          <p className="mt-8">
             <WhatsAppLink
               label={`Conversar pelo WhatsApp ${WHATSAPP_DISPLAY}`}
-              className="link-underline pb-0.5 transition-colors duration-300 hover:text-bronze"
+              className="btn-ghost inline-block rounded-full px-7 py-3 text-[0.7rem] tracking-[0.2em] text-mute uppercase transition-colors duration-300 hover:text-bronze"
             >
               WhatsApp {WHATSAPP_DISPLAY}
             </WhatsAppLink>
